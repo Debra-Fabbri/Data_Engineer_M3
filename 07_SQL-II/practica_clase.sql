@@ -15,7 +15,7 @@ FROM cohorte c
 RIGHT JOIN instructor i ON(c.idInstructor = i.idInstructor);
 -- CROSS JOIN instructor i ON(c.idInstructor = i.idInstructor);
 
-use henry_m3;
+use data_engineer_m3;
 SELECT v.Fecha, c.Nombre_y_Apellido, (v.Precio * v.Cantidad) as venta
 FROM venta v
 -- JOIN cliente c ON(c.IdCliente = v.IdCliente);

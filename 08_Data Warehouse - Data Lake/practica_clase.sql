@@ -12,7 +12,8 @@ WHERE IdCliente NOT IN
 	(SELECT round(avg(Edad))
 	FROM cliente);
     
-ALTER VIEW clientes_alto_gasto AS     
+-- CREATE VIEW clientes_alto_gasto AS  
+ALTER VIEW clientes_alto_gasto AS
 SELECT c.IdCliente, c.Nombre_y_Apellido, (v.Precio * v.Cantidad) AS ventas
 FROM venta v
 JOIN cliente c using(IdCliente)
